@@ -16,9 +16,7 @@
   <meta content="favicon/browserconfig.xml" name="msapplication-config">
   <meta content="#ffffff" name="theme-color">
 
-  <!-- используйте только для шрифта находящегося на первом экране -->
-
-  <!-- <link rel="preload" href="fonts/placeholder.woff2" as="font" crossorigin="anonymous"> -->
+  <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/style.min.css">
   <title>Питомник Мейн-Кунов</title>
@@ -26,8 +24,58 @@
 
 <body>
 
-  <div style="display: none;">
-    <include src="build/img/sprite_auto.svg">
+ <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+
+        <a class="header__logo">
+          <img src="img/svg/logo.svg", width="57", height="26", alt="Логотип питомника">
+        </a>
+
+          <div class="header__content">
+            <div class="social">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link" href="#" aria-label="Вконтакте">
+                    <svg class="social__icon" width="13" height="8">
+                      <use xlink:href="#icon-vk" x="0" y="0"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#" aria-label="Твиттер">
+                    <svg class="social__icon" width="16" height="11">
+                        <use xlink:href="#icon-twitter" x="0" y="0"></use>
+                      </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#" aria-label="Фейсбук">
+                    <svg class="social__icon" width="6" height="12">
+                      <use xlink:href="#icon-fb" x="0" y="0"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="header__inner">
+              <span class="header__city">Новосибирск</span>
+              <h1 class="header__title">Питомник Мейн-Кунов</h1>
+              <p class="header__lead">Первый питомник с&nbsp;расширенным спектром услуг</p>
+              <a class="btn" href="#">Смотреть котиков</a>
+            </div>
+          </div>
+
+      </div>
+
+    </header>
+
+
   </div>
 
   <script src="js/vendor.min.js"></script>
