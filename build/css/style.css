@@ -695,6 +695,9 @@ button,
 
 .header__container.container {
   padding-bottom: 58px;
+}
+
+.header__container {
   background-image: url("../img/bg/intro-desktop.png");
   background-repeat: no-repeat;
   background-size: 1019px 685px;
@@ -830,7 +833,7 @@ button,
 }
 
 @media (max-width: 1279px) {
-  .header__container.container {
+  .header__container {
     background-size: 770px 530px;
   }
 }
@@ -851,6 +854,9 @@ button,
 
   .header__container.container {
     padding-bottom: 40px;
+  }
+
+  .header__container {
     background-image: url("../img/bg/intro-tablet.png");
     background-size: 653px 533px;
   }
@@ -900,8 +906,8 @@ button,
   }
 }
 
-@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-  .header__container.container {
+@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1023px), (min-resolution: 144dpi) and (max-width: 1023px), (min-resolution: 1.5dppx) and (max-width: 1023px) {
+  .header .header__container {
     background-image: url("../img/bg/intro-tablet@2x.png");
   }
 }
@@ -925,6 +931,9 @@ button,
 
   .header__container.container {
     padding-bottom: 275px;
+  }
+
+  .header__container {
     background-image: url("../img/bg/intro-mobile.png");
     background-size: 275px 256px;
   }
@@ -976,14 +985,14 @@ button,
   }
 }
 
-@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-  .header__container.container {
+@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 767px), (min-resolution: 144dpi) and (max-width: 767px), (min-resolution: 1.5dppx) and (max-width: 767px) {
+  .header .header__container {
     background-image: url("../img/bg/intro-mobile@2x.png");
   }
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .header__container.container {
+  .header__container {
     background-image: url("../img/bg/intro-desktop@2x.png");
   }
 }
