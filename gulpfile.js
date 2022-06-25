@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const plumber = require('gulp-plumber');
 const sourcemap = require('gulp-sourcemaps');
+const htmlmin = require('gulp-htmlmin');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
@@ -14,24 +15,17 @@ const del = require('del');
 const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
 const fileinclude = require('gulp-file-include');
-const htmlbeautify = require('gulp-html-beautify');
-const gcmq = require('gulp-group-css-media-queries');
 
 const html = () => {
   return gulp.src(['source/*.html'])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@root',
-      context: { // глобальные переменные для include
+      context: {
         test: 'text'
       }
     }))
-    .pipe(htmlbeautify({
-      'indent_size': 2,
-      'preserve_newlines': true,
-      'max_preserve_newlines': 0,
-      'wrap_attributes': 'auto',
-    }))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('build'));
 };
 
@@ -43,7 +37,6 @@ const css = () => {
       .pipe(postcss([autoprefixer({
         grid: true,
       })]))
-      .pipe(gcmq()) // выключите, если в проект импортятся шрифты через ссылку на внешний источник
       .pipe(gulp.dest('build/css'))
       .pipe(csso())
       .pipe(rename('style.min.css'))
