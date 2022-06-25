@@ -1,0 +1,14 @@
+.pets {
+  padding-top: 223px;
+  padding-bottom: 83px;
+}
+
+.pets__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pets__lead {
+  max-width: 526px;
+}
