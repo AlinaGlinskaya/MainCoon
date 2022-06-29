@@ -28,11 +28,27 @@
   }
 }
 
-.header__container.container {
+.header__container {
   padding-bottom: 58px;
+
+	background-image: url("../img/bg/intro-desktop.png");
+  background-repeat: no-repeat;
+  background-size: 1019px 685px;
+  background-position: right bottom;
+
+	@include retina {
+    background-image: url("../img/bg/intro-desktop@2x.png");
+  }
+
+	@include viewport--l {
+    background-size: 770px 530px;
+  }
 
   @include viewport--md {
     padding-bottom: 40px;
+
+		background-image: url("../img/bg/intro-tablet.png");
+    background-size: 653px 533px;
 
     @include retina {
       background-image: url("../img/bg/intro-tablet@2x.png");
@@ -42,34 +58,12 @@
   @include viewport--sm {
     padding-bottom: 275px;
 
+		background-image: url("../img/bg/intro-mobile.png");
+    background-size: 275px 256px;
+
     @include retina {
       background-image: url("../img/bg/intro-mobile@2x.png");
     }
-  }
-}
-
-.header__container {
-  background-image: url("../img/bg/intro-desktop.png");
-  background-repeat: no-repeat;
-  background-size: 1019px 685px;
-  background-position: right bottom;
-
-  @include retina {
-    background-image: url("../img/bg/intro-desktop@2x.png");
-  }
-
-  @include viewport--l {
-    background-size: 770px 530px;
-  }
-
-  @include viewport--md {
-    background-image: url("../img/bg/intro-tablet.png");
-    background-size: 653px 533px;
-  }
-
-  @include viewport--sm {
-    background-image: url("../img/bg/intro-mobile.png");
-    background-size: 275px 256px;
   }
 }
 

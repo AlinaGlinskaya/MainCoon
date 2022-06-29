@@ -1,0 +1,58 @@
+.cats {
+  padding-top: 223px;
+  padding-bottom: 83px;
+}
+
+.cats__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cats__lead {
+  max-width: 526px;
+}
+
+.cats__swiper-container {
+  .swiper-wrapper {
+    display: grid;
+    grid-template-rows: 214px 241px;
+    grid-template-columns: 519px 474px;
+    column-gap: 31px;
+    row-gap: 19px;
+    grid-template-areas: "top center" "bottom center";
+  }
+
+  .swiper-btn {
+    display: none;
+  }
+
+  .swiper-slide {
+    flex-shrink: 1;
+
+    @include viewport--md {
+      flex-shrink: 0;
+    }
+  }
+}
+
+.cats__swiper-slide {
+  &--top {
+    grid-area: top;
+  }
+
+  &--bottom {
+    grid-area: bottom;
+  }
+
+  &--center {
+    display: flex;
+    grid-area: center;
+
+    img {
+      object-fit: cover;
+      object-position: bottom;
+    }
+  }
+}
+
