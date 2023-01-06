@@ -1,6 +1,6 @@
 .btn {
   display: inline-flex;
-  padding: 17px 41px 17px 33px;
+  padding: 17px 37px;
 
   font-size: 14px;
   line-height: 16px;
@@ -20,6 +20,25 @@
 
     font-size: 12px;
     line-height: 14px;
+  }
+
+  &--control {
+    padding: 10px 20px 10px 9px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 500;
+    color: rgba($color: $color-default-white, $alpha: 0.2);
+
+    border: none;
+
+    &.active {
+      color: $color-default-white;
+
+      &:hover,
+      &:focus {
+      opacity: 1;
+    }
+    }
   }
 
   @media (hover: hover), screen and (min-width: 0\0) {

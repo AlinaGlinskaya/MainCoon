@@ -83,13 +83,13 @@
           <div class="tabs">
             <ul class="tabs__controls">
               <li class="tabs__control">
-                <button class="tabs__btn btn-reset" type="button">Коты</button>
+                <button class="btn btn-reset btn--control active" type="button">Коты</button>
               </li>
               <li class="tabs__control">
-                <button class="tabs__btn btn-reset" type="button">Кошки</button>
+                <button class="btn btn-reset btn--control" type="button">Кошки</button>
               </li>
               <li class="tabs__control">
-                <button class="tabs__btn btn-reset" type="button">Котята</button>
+                <button class="btn btn-reset btn--control" type="button">Котята</button>
               </li>
             </ul>
             <div class="tabs__content">
@@ -97,13 +97,26 @@
                 <div class="swiper-container cats__swiper-container">
                   <div class="swiper-wrapper">
                       <div class="swiper-slide cats__swiper-slide  cats__swiper-slide--top">
-                        <img src="img/slides/cat-1-desktop.jpg" width="517" height="214" alt="Фото кота">
+                        <picture>
+                          <source srcset="img/slides/cat-1-tablet.webp" media="(max-width: 1023px)" type="image/webp">
+                          <source srcset="img/slides/cat-1-desktop.webp" type="image/webp">
+                          <img src="img/slides/cat-1-desktop.jpg" width="517" height="214" alt="Фото кота">
+                        </picture>
                       </div>
                       <div class="swiper-slide cats__swiper-slide  cats__swiper-slide--bottom">
-                        <img src="img/slides/cat-2-desktop.jpg" width="519" height="241" alt="Фото кота">
+                        <picture>
+                          <source srcset="img/slides/cat-2-tablet.webp" media="(max-width: 1023px)" type="image/webp">
+                          <source srcset="img/slides/cat-2-desktop.webp" type="image/webp">
+                          <img src="img/slides/cat-2-desktop.jpg" width="519" height="241" alt="Фото кота">
+                        </picture>
                       </div>
                       <div class="swiper-slide cats__swiper-slide  cats__swiper-slide--center">
-                        <img src="img/slides/cat-3-desktop.jpg" width="474" height="536" alt="Фото кота">
+                        <picture>
+                          <source srcset="img/slides/cat-3-mobile.webp" media="(max-width: 767px)" type="image/webp">
+                          <source srcset="img/slides/cat-3-tablet.webp" media="(max-width: 1023px)" type="image/webp">
+                          <source srcset="img/slides/cat-3-desktop.webp" type="image/webp">
+                          <img src="img/slides/cat-3-desktop.jpg" width="474" height="536" alt="Фото кота">
+                        </picture>
                       </div>
                   </div>
                   <div class="swiper-btn swiper-button-prev">
@@ -116,7 +129,7 @@
             </div>
           </div>
         </div>
-
+        <button class="btn" type="button">Смотреть больше</button>
       </div>
     </section>
 

@@ -14,13 +14,27 @@
 }
 
 .cats__swiper-container {
+  @include viewport--md {
+    overflow: visible;
+    overflow-x: clip;
+  }
+
   .swiper-wrapper {
     display: grid;
     grid-template-rows: 214px 241px;
-    grid-template-columns: 519px 474px;
-    column-gap: 31px;
-    row-gap: 19px;
+    grid-template-columns: 50% 50%;
+    row-gap: 30px;
     grid-template-areas: "top center" "bottom center";
+
+    @include viewport--lg-mobile-first {
+      transform: translate3d(0, 0, 0) !important;
+      column-gap: 30px;
+    }
+
+    @include viewport--md {
+      display: flex;
+      align-items: center;
+    }
   }
 
   .swiper-btn {
@@ -28,15 +42,59 @@
   }
 
   .swiper-slide {
-    flex-shrink: 1;
-
     @include viewport--md {
-      flex-shrink: 0;
+
+      &-active {
+        left: 30%;
+      }
+
+      &-prev {
+        left: 33.3%;
+      }
+
+      &-active img {
+        transform: scale(2.0);
+        position: relative;
+        z-index: 100;
+        max-width: 80%;
+        object-position: center;
+      }
+    }
+
+    @include viewport--sm {
+      &-active {
+        left: 0;
+      }
+
+      &-prev {
+        left: 0;
+      }
     }
   }
 }
 
 .cats__swiper-slide {
+  @include viewport--lg-mobile-first {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+
+  @include viewport--md {
+    height: 200px;
+  }
+
+  img {
+    height: 100%;
+
+    object-fit: cover;
+    object-position: bottom;
+
+    @include viewport--md {
+      width: 500px;
+      object-position: center;
+    }
+  }
+
   &--top {
     grid-area: top;
   }
@@ -46,13 +104,7 @@
   }
 
   &--center {
-    display: flex;
     grid-area: center;
-
-    img {
-      object-fit: cover;
-      object-position: bottom;
-    }
   }
 }
 

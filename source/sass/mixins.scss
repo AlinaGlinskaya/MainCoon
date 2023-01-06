@@ -37,6 +37,12 @@
   }
 }
 
+@mixin viewport--lg-mobile-first {
+  @media (min-width: $viewport--lg) {
+    @content;
+  }
+}
+
 // Mobile first
 
 /* @mixin viewport--md {

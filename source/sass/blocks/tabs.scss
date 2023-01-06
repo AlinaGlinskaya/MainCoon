@@ -1,3 +1,34 @@
 .tabs__content {
-  max-width: 1024px;
+  width: 76vw;
+  max-width: 1040px;
+  padding: 25px 0 55px;
+
+  @include viewport--md {
+    width: 100%;
+    max-width: 90vw;
+  }
+}
+
+.tabs__item {
+  @include viewport--md {
+    padding: 150px 0;
+  }
+}
+
+.tabs__controls {
+  margin: 24px 0 10px;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabs__control {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
