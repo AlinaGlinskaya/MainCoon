@@ -12,8 +12,6 @@
   background-color: $color-transparent;
 
   cursor: pointer;
-  border: 1px solid $color-muesli;
-  transition: opacity $default-transition-settings;
 
   @include viewport--sm {
     padding: 12px 16px;
@@ -31,21 +29,36 @@
 
     border: none;
 
+    transition: color $default-transition-settings;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: rgba($color: $color-default-white, $alpha: 1);
+        transition: color $default-transition-settings;
+      }
+    }
+
     &.active {
       color: $color-default-white;
 
       &:hover,
       &:focus {
       opacity: 1;
-    }
+      }
     }
   }
 
-  @media (hover: hover), screen and (min-width: 0\0) {
-    &:hover,
-    &:focus {
-      opacity: 0.75;
-      transition: opacity $default-transition-settings;
+  &--bordered {
+    border: 1px solid $color-muesli;
+    transition: background-color $default-transition-settings;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background-color: $color-muesli;
+        transition: background-color $default-transition-settings;
+      }
     }
   }
 }

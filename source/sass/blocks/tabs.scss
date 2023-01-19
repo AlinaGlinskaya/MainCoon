@@ -1,17 +1,13 @@
 .tabs__content {
+  position: relative;
   width: 76vw;
   max-width: 1040px;
-  padding: 25px 0 55px;
+  padding: 175px 0 155px;
 
   @include viewport--md {
     width: 100%;
     max-width: 90vw;
-  }
-}
-
-.tabs__item {
-  @include viewport--md {
-    padding: 150px 0;
+    padding: 175px 50px 155px;
   }
 }
 

@@ -13,6 +13,44 @@
   max-width: 526px;
 }
 
+.swiper-button {
+  display: none;
+
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+
+  &-next {
+    right: -50px;
+    transform: scale(-1, 1);
+
+    @include viewport--sm {
+      right: -20px;
+    }
+  }
+
+  &-prev {
+    left: -50px;
+
+    @include viewport--sm {
+      left: -20px;
+    }
+  }
+
+  @include viewport--md {
+    display: block;
+  }
+
+  svg {
+    fill: none;
+    color: $color-muesli;
+  }
+
+  .btn {
+    border: none;
+  }
+}
+
 .cats__swiper-container {
   @include viewport--md {
     overflow: visible;
@@ -35,10 +73,6 @@
       display: flex;
       align-items: center;
     }
-  }
-
-  .swiper-btn {
-    display: none;
   }
 
   .swiper-slide {

@@ -11,6 +11,10 @@ const initCatsSlider = () => {
       slidesPerView: 1,
       spaceBetween: 23,
       watchOverflow: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
       breakpoints: {
         320: {
           slidesPerView: 1,

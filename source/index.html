@@ -67,7 +67,7 @@
               <span class="header__city">Новосибирск</span>
               <h1 class="header__title">Питомник Мейн-Кунов</h1>
               <p class="header__lead">Первый питомник с&nbsp;расширенным спектром услуг</p>
-              <a class="btn" href="#">Смотреть котиков</a>
+              <a class="btn btn--bordered" href="#">Смотреть котиков</a>
             </div>
           </div>
 
@@ -119,17 +119,26 @@
                         </picture>
                       </div>
                   </div>
-                  <div class="swiper-btn swiper-button-prev">
-                    <button type="button">Prev</button>
+                </div>
+                  <div class="swiper-button swiper-button-prev">
+                    <button class="btn" type="button" aria-label="Предыдущий слайд">
+                      <svg class="swiper-button__icon" width="15" height="31">
+                        <use xlink:href="#slider-arrow" x="0" y="0"></use>
+                      </svg>
+                    </button>
                   </div>
-                  <div class="swiper-btn swiper-button-next">
-                    <button type="button">Next</button>
+                  <div class="swiper-button swiper-button-next">
+                    <button class="btn" type="button" aria-label="Следующий слайд">
+                      <svg class="swiper-button__icon" width="15" height="31">
+                        <use xlink:href="#slider-arrow" x="0" y="0"></use>
+                      </svg>
+                    </button>
                   </div>
-              </div>
+
             </div>
           </div>
         </div>
-        <button class="btn" type="button">Смотреть больше</button>
+        <button class="btn btn--bordered" type="button">Смотреть больше</button>
       </div>
     </section>
 
