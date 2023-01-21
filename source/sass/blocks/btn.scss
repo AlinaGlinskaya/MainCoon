@@ -31,6 +31,11 @@
 
     transition: color $default-transition-settings;
 
+    @include viewport--sm {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
     @media (hover: hover), screen and (min-width: 0\0) {
       &:hover,
       &:focus {
