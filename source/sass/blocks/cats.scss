@@ -52,6 +52,11 @@
   svg {
     fill: none;
     color: $color-muesli;
+
+    @include viewport--sm {
+      width: 8px;
+      height: 18px;
+    }
   }
 
   .btn {

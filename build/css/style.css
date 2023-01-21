@@ -1018,6 +1018,10 @@ button,
   .swiper-button svg {
     fill: none;
     color: #a07b50; }
+    @media (max-width: 767px) {
+      .swiper-button svg {
+        width: 8px;
+        height: 18px; } }
   .swiper-button .btn {
     border: none; }
 
@@ -1150,7 +1154,7 @@ button,
       padding: 123px 47px 200px; } }
   @media (max-width: 767px) {
     .tabs__content {
-      padding: 10px 15px 10px; } }
+      padding: 10px 27px 96px; } }
 
 .tabs__controls {
   margin: 24px 0 10px;
@@ -1170,7 +1174,7 @@ button,
       margin-bottom: 57px; } }
   @media (max-width: 767px) {
     .tabs__controls {
-      margin: 10px 0 50px; } }
+      margin: 10px 0 15px; } }
 
 .tabs__control {
   margin-right: 20px; }
