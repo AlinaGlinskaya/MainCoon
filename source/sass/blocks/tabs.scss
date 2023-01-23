@@ -40,3 +40,11 @@
     margin-right: 0;
   }
 }
+
+.tabs__item {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}

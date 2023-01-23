@@ -940,20 +940,18 @@ button,
         font-size: 16px;
         line-height: 20px; } }
     @media (hover: hover), screen and (min-width: 0\0) {
-      .btn--control:hover, .btn--control:focus {
+      .btn--control:hover, .btn--control:focus-visible {
         color: white;
         -webkit-transition: color 0.3s ease;
         transition: color 0.3s ease; } }
-    .btn--control.active {
+    .btn--control.is-active {
       color: #ffffff; }
-      .btn--control.active:hover, .btn--control.active:focus {
-        opacity: 1; }
   .btn--bordered {
     border: 1px solid #a07b50;
     -webkit-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease; }
     @media (hover: hover), screen and (min-width: 0\0) {
-      .btn--bordered:hover, .btn--bordered:focus {
+      .btn--bordered:hover, .btn--bordered:focus-visible {
         background-color: #a07b50;
         -webkit-transition: background-color 0.3s ease;
         transition: background-color 0.3s ease; } }
@@ -1180,6 +1178,11 @@ button,
   margin-right: 20px; }
   .tabs__control:last-child {
     margin-right: 0; }
+
+.tabs__item {
+  display: none; }
+  .tabs__item.is-active {
+    display: block; }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,

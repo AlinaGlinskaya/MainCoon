@@ -38,19 +38,14 @@
 
     @media (hover: hover), screen and (min-width: 0\0) {
       &:hover,
-      &:focus {
+      &:focus-visible {
         color: rgba($color: $color-default-white, $alpha: 1);
         transition: color $default-transition-settings;
       }
     }
 
-    &.active {
+    &.is-active {
       color: $color-default-white;
-
-      &:hover,
-      &:focus {
-      opacity: 1;
-      }
     }
   }
 
@@ -60,7 +55,7 @@
 
     @media (hover: hover), screen and (min-width: 0\0) {
       &:hover,
-      &:focus {
+      &:focus-visible {
         background-color: $color-muesli;
         transition: background-color $default-transition-settings;
       }
