@@ -2,16 +2,10 @@
   position: relative;
   width: 76vw;
   max-width: 1040px;
-  padding: 22px 0 58px;
 
   @include viewport--md {
     width: 100%;
     max-width: 90vw;
-    padding: 123px 47px 200px;
-  }
-
-  @include viewport--sm {
-    padding: 10px 27px 96px;
   }
 }
 
@@ -43,6 +37,15 @@
 
 .tabs__item {
   display: none;
+  padding: 22px 0 58px;
+
+  @include viewport--md {
+    padding: 123px 47px 200px;
+  }
+
+  @include viewport--sm {
+    padding: 10px 27px 96px;
+  }
 
   &.is-active {
     display: block;

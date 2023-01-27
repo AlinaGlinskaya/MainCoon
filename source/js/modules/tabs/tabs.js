@@ -1,21 +1,36 @@
 const tabs = document.querySelector('[data-tabs="parent"]');
-const controls = document.querySelectorAll('[data-tabs="control"]');
+const controls = document.querySelector('[data-tabs="controls"]');
 
 export class Tabs {
   init() {
-    if (tabs) {
+    if (!tabs || !controls) {
       return;
     }
-    this._setTabInitialState();
-    const tabsControls = tabs.querySelector('[data-tabs="controls"]');
-    tabsControls.addEventListener('click', this._openTab.bind(this));
+    controls.addEventListener('click', this._openTab.bind(this));
   }
 
-  _setTabInitialState() {
-    const tabsItems = tabs.querySelectorAll('[data-tabs="item"]');
-    const tabsContent = tabs.querySelector('[data-tabs="content"]');
-    const blockHeight = this._returnMaxHeight(tabsItems);
-    tabsContent.style.height = `${blockHeight}px`;
+  _returnScopeList(nodeList, parent) {
+    const scopeList = [];
+    nodeList.forEach((element) => {
+      const elementParent = element.closest(tabs);
+      if (elementParent === parent) {
+        scopeList.push(element);
+      }
+    });
+
+    return scopeList;
+  }
+
+  _returnScopeChild(nodeList, parent) {
+    let currentChild;
+    nodeList.forEach((element) => {
+      const elementParent = element.closest(tabs);
+      if (elementParent === parent) {
+        currentChild = element;
+      }
+    });
+
+    return currentChild;
   }
 
   _returnMaxHeight(tabItems) {
@@ -27,18 +42,6 @@ export class Tabs {
     return height[height.length - 1];
   }
 
-  _openTab(evt) {
-    if (!evt.target.closest('[data-tabs="control"]')) {
-      return;
-    }
-    controls.forEach((control) => {
-      control.classList.remove('is-active');
-    });
-    evt.target.classList.add('is-active');
-    const activeIndex = evt.target.dataset.index;
-    const activeTab = tabs.querySelector('[data-tabs="item"].is-active');
-    const tabToOpen = tabs.querySelector(`[data-tabs="item"][data-index="${activeIndex}"]`);
-    activeTab.classList.remove('is-active');
-    tabToOpen.classList.add('is-active');
+  _openTab() {
   }
 }
