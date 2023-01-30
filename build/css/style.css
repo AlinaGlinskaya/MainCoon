@@ -1143,7 +1143,8 @@ button,
 .tabs__content {
   position: relative;
   width: 76vw;
-  max-width: 1040px; }
+  max-width: 1040px;
+  overflow: hidden; }
   @media (max-width: 1023px) {
     .tabs__content {
       width: 100%;
@@ -1175,8 +1176,11 @@ button,
     margin-right: 0; }
 
 .tabs__item {
-  display: none;
-  padding: 22px 0 58px; }
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  padding: 22px 0 58px;
+  width: 100%; }
   @media (max-width: 1023px) {
     .tabs__item {
       padding: 123px 47px 200px; } }
@@ -1184,7 +1188,8 @@ button,
     .tabs__item {
       padding: 10px 27px 96px; } }
   .tabs__item.is-active {
-    display: block; }
+    opacity: 1;
+    visibility: visible; }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
