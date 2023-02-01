@@ -2,7 +2,6 @@
   position: relative;
   width: 76vw;
   max-width: 1040px;
-  overflow: hidden;
 
   @include viewport--md {
     width: 100%;
@@ -38,10 +37,9 @@
 
 .tabs__item {
   position: absolute;
-  opacity: 0;
   visibility: hidden;
+  opacity: 0;
   padding: 22px 0 58px;
-  width: 100%;
 
   @include viewport--md {
     padding: 123px 47px 200px;
@@ -52,7 +50,7 @@
   }
 
   &.is-active {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
   }
 }

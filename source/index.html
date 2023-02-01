@@ -80,20 +80,20 @@
         <div class="cats__wrapper">
           <h2 class="title cats__title">Питомцы</h2>
           <p class="lead cats__lead">Все представители нашего питомника имеют ветеринарный паспорт с&nbsp;отметками о&nbsp;прививках и&nbsp;документ с&nbsp;родословной</p>
-          <div class="tabs" data-tabs="parent">
+          <div class="tabs" data-tabs="parent" data-height="max">
             <ul class="tabs__controls" data-tabs="controls">
               <li class="tabs__control">
-                <button class="btn btn-reset btn--control" type="button" data-tabs="control">Коты</button>
+                <button class="btn btn-reset btn--control is-active" type="button" data-tabs="control" data-index="0">Коты</button>
               </li>
               <li class="tabs__control">
-                <button class="btn btn-reset btn--control" type="button" data-tabs="control">Кошки</button>
+                <button class="btn btn-reset btn--control" type="button" data-tabs="control" data-index="1">Кошки</button>
               </li>
               <li class="tabs__control">
-                <button class="btn btn-reset btn--control" type="button" data-tabs="control">Котята</button>
+                <button class="btn btn-reset btn--control" type="button" data-tabs="control" data-index="2">Котята</button>
               </li>
             </ul>
             <div class="tabs__content" data-tabs="content">
-              <div class="tabs__item" data-tabs="item">
+              <div class="tabs__item is-active" data-tabs="item" data-index="0">
                 <div class="swiper-container cats__swiper-container">
                   <div class="swiper-wrapper">
                       <div class="swiper-slide cats__swiper-slide  cats__swiper-slide--top">
@@ -139,10 +139,10 @@
                     </button>
                   </div>
             </div>
-            <div class="tabs__item" data-tabs="item">
+            <div class="tabs__item" data-tabs="item" data-index="1">
               Контент 2
             </div>
-            <div class="tabs__item" data-tabs="item">
+            <div class="tabs__item" data-tabs="item" data-index="2">
               Контент 3
             </div>
           </div>

@@ -1143,8 +1143,7 @@ button,
 .tabs__content {
   position: relative;
   width: 76vw;
-  max-width: 1040px;
-  overflow: hidden; }
+  max-width: 1040px; }
   @media (max-width: 1023px) {
     .tabs__content {
       width: 100%;
@@ -1177,10 +1176,9 @@ button,
 
 .tabs__item {
   position: absolute;
-  opacity: 0;
   visibility: hidden;
-  padding: 22px 0 58px;
-  width: 100%; }
+  opacity: 0;
+  padding: 22px 0 58px; }
   @media (max-width: 1023px) {
     .tabs__item {
       padding: 123px 47px 200px; } }
@@ -1188,8 +1186,8 @@ button,
     .tabs__item {
       padding: 10px 27px 96px; } }
   .tabs__item.is-active {
-    opacity: 1;
-    visibility: visible; }
+    visibility: visible;
+    opacity: 1; }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
