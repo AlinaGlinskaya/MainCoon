@@ -1,3 +1,10 @@
+.tabs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .tabs__content {
   position: relative;
   width: 76vw;
@@ -35,8 +42,12 @@
   }
 }
 
-.tabs__item {
+.tabs__element {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
   visibility: hidden;
   opacity: 0;
   padding: 22px 0 58px;

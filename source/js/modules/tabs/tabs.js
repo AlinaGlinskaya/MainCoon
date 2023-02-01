@@ -1,27 +1,33 @@
-const tabs = document.querySelector('[data-tabs="parent"]');
-const controls = document.querySelector('[data-tabs="controls"]');
+const tabs = document.querySelectorAll('[data-tabs="parent"]');
+const controls = document.querySelectorAll('[data-tabs="control"]');
 
 export class Tabs {
-  init() {
-    if (!tabs || !controls) {
-      return;
-    }
-    controls.addEventListener('click', this._openTab.bind(this));
+  constructor() {
+    this._openTab = this._openTab.bind(this);
   }
 
-  _returnScopeList(nodeList, parent) {
-    const scopeList = [];
+  init() {
+    if (!tabs || !controls.length) {
+      return;
+    }
+    tabs.forEach((tab) => {
+      this._initTab(tab);
+    });
+  }
+
+  _returnClosestList(nodeList, parent) {
+    const closestList = [];
     nodeList.forEach((element) => {
       const elementParent = element.closest('[data-tabs="parent"]');
       if (elementParent === parent) {
-        scopeList.push(element);
+        closestList.push(element);
       }
     });
 
-    return scopeList;
+    return closestList;
   }
 
-  _returnScopeChild(nodeList, parent) {
+  _returnClosestChild(nodeList, parent) {
     let currentChild;
     nodeList.forEach((element) => {
       const elementParent = element.closest('[data-tabs="parent"]');
@@ -33,15 +39,72 @@ export class Tabs {
     return currentChild;
   }
 
-  _returnMaxHeight(tabItems) {
+  _returnMaxHeight(tabElements) {
     let height = [];
-    tabItems.forEach((el) => {
+    tabElements.forEach((el) => {
       height.push(el.scrollHeight);
     });
     height.sort();
     return height[height.length - 1];
   }
 
-  _openTab() {
+  _returnActiveIndex(tabControlElements) {
+    let activeIndex = 0;
+    let flag = true;
+    tabControlElements.forEach((el, index) => {
+      if (el.classList.contains('is-active') && flag) {
+        activeIndex = index;
+        flag = false;
+      }
+    });
+
+    return activeIndex;
+  }
+
+  _removeAllActiveClasses(tabControlElements, tabElements) {
+    tabControlElements.forEach((el, index) => {
+      el.classList.remove('is-active');
+      el.setAttribute('data-index', index);
+    });
+    tabElements.forEach((el) => {
+      el.classList.remove('is-active');
+    });
+  }
+
+  _setTabStartState(dataHeight, tabContentElement, tabControlElements, tabElements) {
+    const activeIndex = this._returnActiveIndex(tabControlElements);
+    const blockHeight = dataHeight === 'max' ? this._returnMaxHeight(tabElements) : tabElements[activeIndex].scrollHeight;
+    this._removeAllActiveClasses(tabControlElements, tabElements);
+    tabControlElements[activeIndex].classList.add('is-active');
+    tabElements[activeIndex].classList.add('is-active');
+    tabContentElement.style.height = blockHeight + 'px';
+  }
+
+  _initTab(tab) {
+    const dataHeight = tab.dataset.height;
+    const tabContentElement = tab.querySelector('[data-tabs="content"]');
+    const tabControlElements = this._returnClosestList(tab.querySelectorAll('[data-tabs="control"]'), tab);
+    const tabElements = this._returnClosestList(tab.querySelectorAll('[data-tabs="element"]'), tab);
+    this._setTabStartState(dataHeight, tabContentElement, tabControlElements, tabElements);
+    controls.forEach((control) => {
+      control.addEventListener('click', this._openTab);
+    });
+  }
+
+  _openTab(evt) {
+    const control = evt.target;
+    if (!control.dataset.tabs === 'control' || control.classList.contains('is-active')) {
+      return;
+    }
+    const currentIndex = control.dataset.index;
+    const parentElement = control.closest('[data-tabs="parent"]');
+    // const dataHeight = parentElement.dataset.height;
+    const tabElements = this._returnClosestList(parentElement.querySelectorAll('[data-tabs="element"]'), parentElement);
+    const activeTabElement = this._returnClosestChild(parentElement.querySelectorAll('[data-tabs="element"].is-active'), parentElement);
+    const activeControl = this._returnClosestChild(parentElement.querySelectorAll('[data-tabs="control"].is-active'), parentElement);
+    activeTabElement.classList.remove('is-active');
+    activeControl.classList.remove('is-active');
+    control.classList.add('is-active');
+    tabElements[currentIndex].classList.add('is-active');
   }
 }
