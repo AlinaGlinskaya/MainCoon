@@ -17,14 +17,16 @@
 // Blocks
 //---------------------------------
 
-@import "blocks/header";
-@import "blocks/footer";
-@import "blocks/social";
 @import "blocks/btn";
-@import "blocks/title";
 @import "blocks/cats";
+@import "blocks/footer";
+@import "blocks/header";
 @import "blocks/lead";
+@import "blocks/properties.scss";
+@import "blocks/social";
 @import "blocks/tabs.scss";
+@import "blocks/title";
+
 
 
 // используйте это для отключения ховеров на тач устройствах

@@ -1,0 +1,217 @@
+.properties {
+  padding: 13px 0 50px;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    transform: translateX(12px);
+  }
+
+  &__lead {
+    max-width: 740px;
+  }
+
+  &__img {
+    position: relative;
+    top: -71px;
+    left: 45px;
+
+    @include viewport--sm {
+      top: 0;
+      left: 0;
+    }
+
+    img {
+      @include viewport--md {
+        width: 410px;
+        height: 610px;
+      }
+
+      @include viewport--sm {
+        width: 267px;
+        height: 291px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+      top: 191px;
+      left: 23px;
+      content: "";
+      width: 519px;
+      height: 519px;
+      background-color: $color-seal-brown;
+      border-radius: 50%;
+
+      @include viewport--md {
+        width: 342px;
+        height: 348px;
+      }
+
+      @include viewport--sm {
+        top: 68px;
+        width: 230px;
+        height: 230px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      top: 133px;
+      left: -30px;
+      content: "";
+      width: 631px;
+      height: 631px;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 1px solid $color-muesli;
+
+      @include viewport--md {
+        width: 442px;
+        height: 448px;
+      }
+
+      @include viewport--sm {
+        top: 16px;
+        width: 330px;
+        height: 330px;
+      }
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include viewport--sm {
+      position: static;
+      width: 100%;
+      transform: none;
+      padding: 20px 10px;
+    }
+  }
+
+  &__item {
+    position: absolute;
+    font-weight: 300;
+    min-width: 270px;
+    max-width: 290px;
+
+    @include viewport--sm {
+      position: relative;
+      min-width: fit-content;
+      max-width: 100%;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 5px;
+      left: -30px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: $color-muesli;
+
+      @include viewport--sm {
+        top: 9px;
+
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    &:first-child {
+      top: 323px;
+      left: -572px;
+      text-align: right;
+
+      &::before {
+        left: 315px;
+
+        @include viewport--sm {
+          left: -17px;
+        }
+      }
+
+      @include viewport--sm {
+        top: 0;
+        left: 0;
+        text-align: left;
+      }
+    }
+
+    &:nth-child(2) {
+      top: 431px;
+      left: 353px;
+
+      &::before {
+        left: -33px;
+
+        @include viewport--sm {
+          left: -17px;
+        }
+      }
+
+      @include viewport--sm {
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      top: 650px;
+      left: 317px;
+      min-width: 200px;
+
+      &::before {
+        left: -33px;
+
+        @include viewport--sm {
+          left: -17px;
+        }
+      }
+
+      @include viewport--sm {
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &:last-child {
+      top: 608px;
+      left: -498px;
+      min-width: 200px;
+      max-width: 200px;
+      text-align: right;
+
+      &::before {
+        top: 8px;
+        left: 216px;
+
+        @include viewport--sm {
+          left: -17px;
+        }
+      }
+
+      @include viewport--sm {
+        top: 0;
+        left: 0;
+        text-align: left;
+      }
+    }
+  }
+}
