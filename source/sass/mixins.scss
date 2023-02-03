@@ -24,6 +24,12 @@
   }
 }
 
+@mixin viewport--desk {
+  @media (max-width: $viewport--desk - 1) {
+    @content;
+  }
+}
+
 
 @mixin viewport--md {
   @media (max-width: $viewport--lg - 1) {

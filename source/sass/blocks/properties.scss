@@ -1,6 +1,10 @@
 .properties {
   padding: 13px 0 50px;
 
+  @include viewport--md {
+    padding: 25px 0 34px;
+  }
+
   &__wrapper {
     position: relative;
     display: flex;
@@ -10,10 +14,22 @@
 
   &__title {
     transform: translateX(12px);
+
+    @include viewport--md {
+      transform: translateX(-3px);
+    }
   }
 
   &__lead {
     max-width: 740px;
+
+    @include viewport--md {
+      max-width: 450px;
+    }
+
+    @include viewport--sm {
+      margin-top: 3px;
+    }
   }
 
   &__img {
@@ -21,8 +37,13 @@
     top: -71px;
     left: 45px;
 
+    @include viewport--md {
+      top: -20px;
+      left: 19px;
+    }
+
     @include viewport--sm {
-      top: 0;
+      top: 12px;
       left: 0;
     }
 
@@ -50,12 +71,13 @@
       border-radius: 50%;
 
       @include viewport--md {
+        top: 128px;
         width: 342px;
         height: 348px;
       }
 
       @include viewport--sm {
-        top: 68px;
+        top: 50px;
         width: 230px;
         height: 230px;
       }
@@ -74,14 +96,17 @@
       border: 1px solid $color-muesli;
 
       @include viewport--md {
-        width: 442px;
-        height: 448px;
+        top: 89px;
+        left: -19px;
+        width: 419px;
+        height: 425px;
       }
 
       @include viewport--sm {
-        top: 16px;
-        width: 330px;
-        height: 330px;
+        top: 26px;
+        left: -7px;
+        width: 280px;
+        height: 280px;
       }
     }
   }
@@ -98,9 +123,13 @@
 
     @include viewport--sm {
       position: static;
-      width: 100%;
+      width: auto;
       transform: none;
-      padding: 20px 10px;
+      padding: 20px 17px;
+      margin-top: 43px;
+
+      font-size: 14px;
+      line-height: 19px;
     }
   }
 
@@ -110,10 +139,20 @@
     min-width: 270px;
     max-width: 290px;
 
+    @include viewport--desk {
+      min-width: auto;
+      max-width: 190px;
+    }
+
+    @include viewport--md {
+      max-width: 160px;
+    }
+
     @include viewport--sm {
       position: relative;
       min-width: fit-content;
       max-width: 100%;
+      margin-bottom: 21px;
     }
 
     &::before {
@@ -126,8 +165,13 @@
       border-radius: 50%;
       background-color: $color-muesli;
 
+      @include viewport--md {
+        width: 10px;
+        height: 10px;
+      }
+
       @include viewport--sm {
-        top: 9px;
+        top: 4px;
 
         width: 8px;
         height: 8px;
@@ -142,9 +186,26 @@
       &::before {
         left: 315px;
 
+        @include viewport--desk {
+          left: 215px;
+        }
+
+        @include viewport--md {
+          left: 189px;
+        }
+
         @include viewport--sm {
           left: -17px;
         }
+      }
+
+      @include viewport--desk {
+        left: -471px;
+      }
+
+      @include viewport--md {
+        left: -369px;
+        top: 311px;
       }
 
       @include viewport--sm {
@@ -161,9 +222,19 @@
       &::before {
         left: -33px;
 
+        @include viewport--md {
+          top: 2px;
+          left: -21px;
+        }
+
         @include viewport--sm {
           left: -17px;
         }
+      }
+
+      @include viewport--md {
+        top: 385px;
+        left: 224px;
       }
 
       @include viewport--sm {
@@ -180,14 +251,26 @@
       &::before {
         left: -33px;
 
+        @include viewport--md {
+          left: -22px;
+        }
+
         @include viewport--sm {
           left: -17px;
         }
       }
 
+      @include viewport--md {
+        top: 533px;
+        left: 201px;
+        min-width: auto;
+        width: 150px;
+      }
+
       @include viewport--sm {
         top: 0;
         left: 0;
+        width: 100%;
       }
     }
 
@@ -200,17 +283,32 @@
 
       &::before {
         top: 8px;
-        left: 216px;
+        left: 219px;
+
+        @include viewport--md {
+          top: 5px;
+          left: 161px;
+        }
 
         @include viewport--sm {
           left: -17px;
         }
       }
 
+      @include viewport--md {
+        top: 503px;
+        left: -355px;
+        min-width: auto;
+        width: 150px;
+      }
+
       @include viewport--sm {
         top: 0;
         left: 0;
         text-align: left;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 0;
       }
     }
   }
