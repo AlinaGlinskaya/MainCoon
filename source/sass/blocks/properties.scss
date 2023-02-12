@@ -1,5 +1,5 @@
 .properties {
-  padding: 13px 0 50px;
+  padding: 13px 0 33px;
 
   @include viewport--md {
     padding: 25px 0 34px;
@@ -36,10 +36,12 @@
     position: relative;
     top: -71px;
     left: 45px;
+    max-height: 770px;
 
     @include viewport--md {
       top: -20px;
       left: 19px;
+      max-height: 557px;
     }
 
     @include viewport--sm {
