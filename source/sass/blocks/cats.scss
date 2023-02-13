@@ -142,11 +142,6 @@
 }
 
 .cats__swiper-slide {
-  @include viewport--lg-mobile-first {
-    width: 100% !important;
-    margin-right: 0 !important;
-  }
-
   @include viewport--md {
     height: 200px;
   }

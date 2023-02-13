@@ -1,7 +1,6 @@
 const initCatsSlider = () => {
 
-  const catsSlider = document.querySelector('.cats__swiper-container');
-  // const desktop = window.matchMedia('(min-width: 1025px)');
+  const catsSlider = document.querySelectorAll('.cats__swiper-container');
 
   const initSwiper = (slider) => {
   // eslint-disable-next-line no-undef, no-unused-vars
@@ -28,7 +27,9 @@ const initCatsSlider = () => {
     });
   };
 
-  initSwiper(catsSlider);
+  catsSlider.forEach((slider) => {
+    initSwiper(slider);
+  });
 
 };
 

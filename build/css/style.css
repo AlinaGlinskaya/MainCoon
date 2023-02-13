@@ -1037,11 +1037,6 @@ button,
   .cats__swiper-container .swiper-slide-prev {
     left: 0; } }
 
-@media (min-width: 1024px) {
-  .cats__swiper-slide {
-    width: 100% !important;
-    margin-right: 0 !important; } }
-
 @media (max-width: 1023px) {
   .cats__swiper-slide {
     height: 200px; } }
