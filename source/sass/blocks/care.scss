@@ -1,0 +1,174 @@
+.care {
+  padding: 84px 0 100px;
+
+  background-image: url("../img/bg/bg-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/bg/bg-desktop@2x.jpg");
+  }
+
+  @include viewport--md {
+    padding-top: 90px;
+    padding-bottom: 96px;
+
+    background-image: url("../img/bg/bg-tablet.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/bg-tablet@2x.jpg");
+    }
+  }
+
+  @include viewport--sm {
+    padding-top: 55px;
+    padding-bottom: 57px;
+
+    background-image: url("../img/bg/bg-mobile.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/bg-mobile@2x.jpg");
+    }
+  }
+
+  .title {
+    @include viewport--sm {
+      max-width: 240px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__list {
+    margin: 28px 0 0;
+    padding: 0;
+    list-style: none;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 41px;
+    width: 94.5%;
+
+    @include viewport--md {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, auto);
+      width: 83%;
+      margin-top: 18px;
+      padding-left: 15px;
+      gap: 25px;
+    }
+
+    @include viewport--sm {
+      margin-top: 13px;
+      padding-left: 0;
+      width: 100%;
+      gap: 30px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    height: 100%;
+    min-height: 165px;
+
+    background-color: rgba($color: $color-default-black, $alpha: 0.3);
+    border: 1px solid $color-muesli;
+    transition: background-color $default-transition-settings;
+
+    @include viewport--md {
+      min-height: 168px;
+    }
+
+    @include viewport--sm {
+      min-height: auto;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background-color: rgba($color: $color-default-black, $alpha: 0.5);
+        transition: background-color $default-transition-settings;
+
+        .care__arrow {
+          background-color: rgba($color: $color-default-black, $alpha: 0.5);
+          transition: background-color $default-transition-settings;
+        }
+      }
+    }
+  }
+
+  &__desc {
+    padding: 37px 0 20px 56px;
+    margin-right: 55px;
+    flex-grow: 1;
+
+    @include viewport--md {
+      padding-left: 45px;
+      margin-right: 62px;
+    }
+
+    @include viewport--sm {
+      margin-right: 10px;
+      padding: 20px 0 15px 21px;
+    }
+
+    &-title {
+      margin: 0 0 11px;
+
+      font-size: 22px;
+      line-height: 24px;
+      font-weight: 700;
+      color: $color-muesli;
+
+      @include viewport--md {
+        margin-bottom: 13px;
+      }
+
+      @include viewport--sm {
+        margin-bottom: 10px;
+
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+
+    &-text {
+      margin: 0;
+      font-size: 14px;
+      line-height: 23px;
+      font-weight: 300;
+
+      @include viewport--sm {
+        max-width: 450px;
+        line-height: 21px;
+      }
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 18px;
+
+    background-color: $color-muesli;
+    border-left: 1px solid $color-muesli;
+    transition: background-color $default-transition-settings;
+
+    @include viewport--sm {
+      padding: 0 12px;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: none;
+  }
+}

@@ -12,7 +12,7 @@
     align-items: center;
   }
 
-  &__title {
+  .title {
     transform: translateX(12px);
 
     @include viewport--md {
@@ -20,7 +20,7 @@
     }
   }
 
-  &__lead {
+  .lead {
     max-width: 740px;
 
     @include viewport--md {

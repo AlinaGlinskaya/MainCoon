@@ -1,5 +1,5 @@
 .features {
-  padding: 83px 0 60px;
+  padding: 83px 0 100px;
   background-color: $color-seal-brown;
 
   @include viewport--md {
@@ -8,6 +8,7 @@
 
   @include viewport--sm {
     padding-top: 56px;
+    padding-bottom: 58px;
   }
 
   &__wrapper {
@@ -16,11 +17,11 @@
     align-items: center;
   }
 
-  &__lead.lead {
+  .lead {
     font-weight: 400;
   }
 
-  &__title.title {
+  .title {
     @include viewport--sm {
       margin-bottom: 23px;
     }
@@ -56,7 +57,7 @@
     background-color: $color-aubergine;
 
     &:last-child {
-      margin-bottom: 0;
+      margin-right: 0;
     }
 
     @include viewport--md {
@@ -64,6 +65,10 @@
       margin-bottom: 44px;
       width: 360px;
       min-height: 306px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     @include viewport--sm {
@@ -88,7 +93,7 @@
     @include viewport--sm {
       margin-top: 17px;
       max-width: 215px;
-      
+
       font-size: 14px;
       line-height: 20px;
     }
@@ -131,6 +136,10 @@
     fill: $color-muesli;
     stroke: $color-aubergine;
     stroke-width: 2;
+
+    &--consult {
+      height: 108px;
+    }
 
     @include viewport--sm {
       &--vet {
