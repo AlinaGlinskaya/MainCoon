@@ -1,0 +1,275 @@
+.team {
+  padding: 83px 0 73px;
+  background-color: $color-seal-brown;
+
+  @include viewport--md {
+    padding-top: 86px;
+    padding-bottom: 86px;
+  }
+
+  @include viewport--sm {
+    padding-top: 55px;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lead {
+    max-width: 550px;
+
+    @include viewport--sm {
+      max-width: 270px;
+    }
+  }
+
+  .social__icon {
+    &--fb {
+      width: 7px;
+      height: 17px;
+    }
+
+    &--tw {
+      width: 22px;
+      height: 18px;
+
+      @include viewport--sm {
+        height: 11px;
+      }
+    }
+
+    &--vk {
+      width: 33px;
+      height: 12px;
+
+      @include viewport--sm {
+        height: 11px;
+      }
+    }
+  }
+
+  .social__link {
+    padding: 3px 0;
+    width: 23px;
+
+    @include viewport--sm {
+      width: fit-content;
+      min-width: 23px;
+    }
+  }
+
+  .social__list {
+    margin-left: -6px;
+  }
+
+  .swiper-button {
+    top: 57%;
+    transition: opacity $default-transition-settings;
+
+    @include viewport--md {
+      top: 91%;
+    }
+
+    @include viewport--sm {
+      position: static;
+    }
+
+    &-prev {
+      left: -20px;
+
+      @include viewport--md {
+        left: unset;
+        right: 254px;
+      }
+    }
+
+    &-next {
+      right: -20px;
+
+      @include viewport--md {
+        right: -25px;
+      }
+    }
+
+    &--lg {
+      @include viewport--md {
+        display: none;
+      }
+    }
+
+    &--md {
+      display: none;
+
+      @include viewport--md {
+        display: block;
+      }
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.5;
+        transition: opacity $default-transition-settings;
+      }
+    }
+  }
+
+  &__swiper-container {
+    max-width: 83.9%;
+    margin-top: 14px;
+
+    @include viewport--md {
+      margin-top: 16px;
+      max-width: 100%;
+      padding-bottom: 10px;
+    }
+
+    @include viewport--sm {
+      padding-bottom: 0;
+      margin-top: 26px;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    align-items: flex-start;
+
+    @include viewport--md {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+    }
+
+    @include viewport--sm {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__card {
+    padding: 20px 31px 20px 25px;
+    margin-left: 8px;
+    background-color: $color-transparent;
+    border: 1px solid rgba($color: $color-muesli, $alpha: 0.4);
+    transform: translateX(-1px);
+    z-index: 1;
+
+    @include viewport--md {
+      margin-left: 0;
+      transform: none;
+      padding: 20px 25px 23px;
+    }
+
+    @include viewport--sm {
+      padding: 0;
+      margin-top: -63px;
+      border: none;
+    }
+  }
+
+  &__inner {
+    padding: 69px 55px 71px 99px;
+    background-color: $color-aubergine;
+
+    @include viewport--desk {
+      padding-left: 70px;
+    }
+
+    @include viewport--md {
+      padding-left: 103px;
+      padding-top: 72px;
+    }
+
+    @include viewport--sm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 83px 10px 10px;
+    }
+  }
+
+  &__img-block {
+    transform: translateX(54px);
+    min-width: 35%;
+    height: 356px;
+    z-index: 10;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include viewport--sm {
+        width: 126px;
+        height: 126px;
+      }
+    }
+
+    @include viewport--md {
+      min-width: auto;
+      width: 207px;
+      height: 209px;
+      transform: none;
+      margin-top: -113px;
+      margin-right: 54px;
+    }
+
+    @include viewport--sm {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      height: fit-content;
+    }
+  }
+
+  &__name {
+    margin: 0 0 7px;
+
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+    color: $color-muesli;
+
+    @include viewport--sm {
+      margin-bottom: 4px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__job-title {
+    margin: 0 0 23px;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-muesli;
+
+    @include viewport--sm {
+      margin-bottom: 17px;
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 40px;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 300;
+    color: rgba($color: $color-default-white, $alpha: 0.7);
+
+    @include viewport--md {
+      margin-bottom: 44px;
+    }
+
+    @include viewport--sm {
+      margin-bottom: 22px;
+
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+    }
+  }
+}
