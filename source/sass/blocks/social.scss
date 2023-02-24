@@ -34,3 +34,36 @@
     width: 25px;
   }
 }
+
+.social--beige {
+  .social__list {
+    flex-direction: row;
+  }
+
+  .social__item:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  .social__link {
+    width: 28px;
+    height: 28px;
+    padding: 3px;
+    color: $color-muesli;
+    transition: color $default-transition-settings, background-color $default-transition-settings;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-default-white;
+        background-color: $color-muesli;
+        transition: color $default-transition-settings, background-color $default-transition-settings;
+      }
+    }
+  }
+}
+
+.social--bordered {
+  .social__link {
+    border: 1px solid $color-muesli;
+  }
+}

@@ -8,10 +8,11 @@ const initTeamSlider = () => {
           speed: 600,
           loop: true,
           slidesPerView: 1,
+          spaceBetween: 10,
           watchOverflow: false,
           navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next.swiper-button--team',
+            prevEl: '.swiper-button-prev.swiper-button--team',
           },
         });
   };

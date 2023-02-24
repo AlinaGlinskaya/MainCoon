@@ -1,0 +1,264 @@
+.reviews {
+  padding: 41px 0 40px;
+
+  @include viewport--md {
+    padding-top: 33px;
+    padding-bottom: 45px;
+  }
+
+  @include viewport--sm {
+    padding-top: 24px;
+    padding-bottom: 63px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .swiper-button {
+    &--lg {
+      @include viewport--md {
+        display: none;
+      }
+
+      svg {
+        opacity: 0.5;
+        transition: opacity $default-transition-settings;
+      }
+
+      .btn {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover,
+        &:focus {
+          svg {
+            opacity: 1;
+            transition: opacity $default-transition-settings;
+          }
+        }
+      }
+    }
+
+    &--md {
+      display: none;
+      
+      @include viewport--md {
+        display: block;
+        position: static;
+        margin-bottom: 40px;
+
+        .btn {
+          padding: 17px 30px;
+        }
+      }
+
+      @include viewport--sm {
+        position: absolute;
+        top: 34%;
+        margin-bottom: 0;
+      }
+
+      .swiper-button__icon {
+        &--md {
+          @include viewport--sm {
+            display: none;
+          }
+        }
+
+        &--sm {
+          display: none;
+
+          @include viewport--sm {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &-prev {
+      @include viewport--sm {
+        left: -53px;
+      }
+    }
+
+    &-next {
+      @include viewport--sm {
+        right: -53px;
+      }
+    }
+  }
+
+  &__slide {
+    display: flex;
+    align-items: center;
+
+    @include viewport--md {
+      flex-direction: column;
+    }
+  }
+
+  &__swiper-container {
+    max-width: 83.6%;
+    margin-top: 30px;
+
+    @include viewport--desk {
+      max-width: 100%;
+    }
+
+    @include viewport--md {
+      margin-top: 32px;
+      max-width: 84%;
+    }
+
+    @include viewport--sm {
+      max-width: 100%;
+    }
+  }
+
+  &__img-block {
+    position: relative;
+    z-index: 10;
+
+    flex-shrink: 0;
+    padding-top: 15px;
+
+    img {
+      width: 481px;
+      height: 331px;
+
+      @include viewport--desk {
+        width: 380px;
+        height: auto;
+      }
+
+      @include viewport--md {
+        width: 302px;
+        height: 208px;
+      }
+
+      @include viewport--sm {
+        width: 242px;
+        height: 166px;
+      }
+    }
+
+    @include viewport--md {
+      display: flex;
+      align-items: flex-end;
+      padding-top: 0;
+    }
+
+    @include viewport--sm {
+      align-items: center;
+    }
+  }
+
+  &__card {
+    padding: 107px 92px 80px 145px;
+    margin-left: -98px;
+    min-height: 410px;
+
+    background-color: $color-seal-brown;
+
+    @include viewport--desk {
+      padding-right: 60px;
+    }
+
+    @include viewport--md {
+      margin-left: 0;
+      margin-top: -113px;
+      padding: 147px 40px 36px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: fit-content;
+    }
+
+    @include viewport--sm {
+      padding: 114px 23px 42px;
+      margin-top: -83px;
+    }
+  }
+
+  &__name {
+    margin: 0 0 15px;
+
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+
+    @include viewport--sm {
+      margin-bottom: 18px;
+
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 36px;
+
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 300;
+    color: rgba($color: $color-default-white, $alpha: 0.7);
+
+    @include viewport--md {
+      text-align: center;
+      max-width: 74%;
+      margin-bottom: 23px;
+    }
+
+    @include viewport--sm {
+      max-width: 100%;
+      margin-bottom: 21px;
+
+      line-height: 19px;
+    }
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+
+    color: $color-muesli;
+
+    @include viewport--md {
+      padding-left: 40px;
+    }
+
+    @include viewport--sm {
+      padding-left: 0;
+    }
+  }
+
+  &__date {
+    margin-right: 38px;
+
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+
+    @include viewport--md {
+      display: none;
+    }
+
+    .swiper-button {
+      position: static;
+
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+}

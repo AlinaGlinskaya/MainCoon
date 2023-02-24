@@ -27,9 +27,14 @@
     }
   }
 
+  .social__link {
+    padding: 3px 5px;
+    width: fit-content;
+  }
+
   .social__icon {
     &--fb {
-      width: 7px;
+      width: 11px;
       height: 15px;
     }
 

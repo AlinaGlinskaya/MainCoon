@@ -11,8 +11,8 @@ const initCatsSlider = () => {
       spaceBetween: 23,
       watchOverflow: true,
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next.swiper-button--cats',
+        prevEl: '.swiper-button-prev.swiper-button--cats',
       },
       breakpoints: {
         320: {
