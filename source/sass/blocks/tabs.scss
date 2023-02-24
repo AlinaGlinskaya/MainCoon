@@ -6,7 +6,6 @@
 }
 
 .tabs__content {
-  position: relative;
   width: 76vw;
   max-width: 1040px;
 
@@ -43,13 +42,8 @@
 }
 
 .tabs__element {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: auto;
-  visibility: hidden;
-  opacity: 0;
   padding: 22px 0 58px;
 
   @include viewport--md {
@@ -58,10 +52,5 @@
 
   @include viewport--sm {
     padding: 10px 27px 96px;
-  }
-
-  &.is-active {
-    visibility: visible;
-    opacity: 1;
   }
 }

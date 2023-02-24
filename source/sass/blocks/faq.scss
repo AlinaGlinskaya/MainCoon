@@ -1,0 +1,260 @@
+.faq {
+  padding: 72px 0 50px;
+
+  @include viewport--md {
+    padding-top: 138px;
+  }
+
+  @include viewport--sm {
+    padding-top: 54px;
+    padding-bottom: 30px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    @include viewport--md {
+      margin-bottom: 17px;
+    }
+
+    @include viewport--sm {
+      margin-bottom: 24px;
+    }
+  }
+
+  .lead {
+    @include viewport--sm {
+      max-width: 75%;
+    }
+  }
+
+  &__list {
+    margin-top: 43px;
+    width: 76%;
+    padding-left: 138px;
+
+    @include viewport--md {
+      width: 96%;
+      padding-left: 106px;
+    }
+
+    @include viewport--sm {
+      width: 100%;
+      padding-left: 0;
+      margin-top: 24px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 35px;
+
+    @include viewport--md {
+      margin-bottom: 24px;
+    }
+
+    @include viewport--sm {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 14px;
+      left: -115px;
+      counter-increment: faq-counter;
+      content: "0"counter(faq-counter);
+      font-size: 70px;
+      line-height: 82px;
+      font-weight: 700;
+      color: $color-muesli;
+
+      @include viewport--md {
+        top: 9px;
+        left: -82px;
+
+        font-size: 50px;
+        line-height: 58px;
+      }
+
+      @include viewport--sm {
+        display: none;
+      }
+    }
+  }
+
+  &__question {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 112px;
+    padding: 20px 124px 20px 41px;
+
+    border: 1px solid rgba($color: $color-muesli, $alpha: 0.4);
+    cursor: pointer;
+    transition: $default-transition-settings;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background-color: $color-seal-brown;
+        transition: $default-transition-settings;
+      }
+    }
+
+    @include viewport--md {
+      min-height: 77px;
+      padding: 10px 143px 10px 27px;
+    }
+
+    @include viewport--sm {
+      min-height: 43px;
+      padding: 4px 56px 11px 12px;
+    }
+  }
+
+  &__theme {
+    margin: 6px 0 0;
+
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+    color: $color-pearl-bush;
+
+    @include viewport--sm {
+      font-size: 14px;
+    }
+  }
+
+  &__answer {
+    padding: 35px 30px 38px 41px;
+    display: none;
+
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 300;
+    color: $color-pearl-bush;
+
+    border: solid rgba($color: $color-muesli, $alpha: 0.4);
+    border-width: 0 1px 1px;
+
+    @include viewport--md {
+      padding: 25px 28px 23px;
+    }
+
+    @include viewport--sm {
+      padding: 10px 12px 6px;
+
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 104px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-transparent;
+    border: none;
+    border-left: 1px solid rgba($color: $color-muesli, $alpha: 0.4);
+    transition: background-color $default-transition-settings;
+
+    @include viewport--md {
+      width: 74px;
+    }
+
+    @include viewport--sm {
+      width: 42px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 25px;
+    max-width: 76%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include viewport--desk {
+      max-width: 82%;
+    }
+
+    @include viewport--md {
+      max-width: 80%;
+      margin-bottom: 22px;
+    }
+
+    @include viewport--sm {
+      max-width: 100%;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__icon {
+    &--minus {
+      display: none;
+      width: 16px;
+      height: 1px;
+      background-color: $color-default-white;
+
+      @include viewport--sm {
+        height: 2px;
+      }
+    }
+
+    &--plus {
+      font-weight: 300;
+      font-size: 36px;
+      line-height: 42px;
+      color: $color-muesli;
+    }
+  }
+
+  &__item.is-active {
+    .faq__answer {
+      display: block;
+    }
+
+    .faq__question {
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover,
+        &:focus {
+          .faq__button {
+            background-color: $color-seal-brown;
+            transition: $default-transition-settings;
+          }
+        }
+      }
+    }
+
+    .faq__button {
+      background-color: $color-muesli;
+      transition: background-color $default-transition-settings;
+    }
+
+    .faq__icon {
+      &--minus {
+        display: block;
+      }
+
+      &--plus {
+        display: none;
+      }
+    }
+  }
+}

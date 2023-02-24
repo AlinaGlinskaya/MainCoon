@@ -9,6 +9,7 @@
 
   @include viewport--sm {
     padding-top: 55px;
+    padding-bottom: 59px;
   }
 
   &__wrapper {
@@ -22,46 +23,38 @@
     max-width: 550px;
 
     @include viewport--sm {
-      max-width: 270px;
+      max-width: 90%;
     }
   }
 
   .social__icon {
     &--fb {
       width: 7px;
-      height: 17px;
+      height: 15px;
     }
 
     &--tw {
-      width: 22px;
-      height: 18px;
+      width: 20px;
+      height: 14px;
 
       @include viewport--sm {
-        height: 11px;
+        width: 16px;
+        height: 12px;
       }
     }
 
     &--vk {
-      width: 33px;
+      width: 21px;
       height: 12px;
 
       @include viewport--sm {
-        height: 11px;
+        width: 18px;
+        height: 10px;
       }
     }
   }
 
-  .social__link {
-    padding: 3px 0;
-    width: 23px;
-
-    @include viewport--sm {
-      width: fit-content;
-      min-width: 23px;
-    }
-  }
-
-  .social__list {
+  .social__item:last-child {
     margin-left: -6px;
   }
 
