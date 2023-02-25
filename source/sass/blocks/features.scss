@@ -34,8 +34,7 @@
 
     display: flex;
     align-items: center;
-    height: 301px;
-    width: 98%;
+    width: 95%;
 
     @include viewport--md {
       flex-direction: column;
@@ -51,7 +50,7 @@
 
   &__item {
     margin-right: 40px;
-    height: 100%;
+    min-height: 301px;
     width: 33.3%;
 
     background-color: $color-aubergine;
@@ -105,7 +104,7 @@
     align-items: center;
     justify-content: center;
     margin: 18px 20px;
-    height: calc(100% - 35px);
+    min-height: 266px;
     padding-top: 18px;
 
     transition: color $default-transition-settings;
@@ -129,6 +128,7 @@
 
     @include viewport--sm {
       padding-top: 36px;
+      min-height: auto;
     }
   }
 

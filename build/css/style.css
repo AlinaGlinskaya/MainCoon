@@ -915,6 +915,7 @@ button,
     fill: none; }
 
 .cats {
+  position: relative;
   padding-top: 223px;
   padding-bottom: 70px; }
   @media (max-width: 1023px) {
@@ -926,17 +927,20 @@ button,
       padding-bottom: 28px; } }
   .cats .swiper-button {
     display: none;
-    top: 37%; }
+    top: 54.2%; }
+    @media (max-width: 767px) {
+      .cats .swiper-button {
+        top: 58%; } }
     .cats .swiper-button-next {
-      right: -50px; }
+      right: -10px; }
       @media (max-width: 767px) {
         .cats .swiper-button-next {
-          right: -20px; } }
+          right: 0; } }
     .cats .swiper-button-prev {
-      left: -50px; }
+      left: -10px; }
       @media (max-width: 767px) {
         .cats .swiper-button-prev {
-          left: -20px; } }
+          left: 0; } }
     @media (max-width: 1023px) {
       .cats .swiper-button {
         display: block; } }
@@ -1325,8 +1329,7 @@ button,
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 301px;
-    width: 98%; }
+    width: 95%; }
     @media (max-width: 1023px) {
       .features__list {
         -webkit-box-orient: vertical;
@@ -1341,7 +1344,7 @@ button,
         margin-top: 26px; } }
   .features__item {
     margin-right: 40px;
-    height: 100%;
+    min-height: 301px;
     width: 33.3%;
     background-color: #1f1c1d; }
     .features__item:last-child {
@@ -1389,7 +1392,7 @@ button,
         -ms-flex-pack: center;
             justify-content: center;
     margin: 18px 20px;
-    height: calc(100% - 35px);
+    min-height: 266px;
     padding-top: 18px;
     -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease; }
@@ -1406,7 +1409,8 @@ button,
         padding-top: 48px; } }
     @media (max-width: 767px) {
       .features__inner {
-        padding-top: 36px; } }
+        padding-top: 36px;
+        min-height: auto; } }
   .features__icon {
     fill: #a07b50;
     stroke: #1f1c1d;
@@ -1985,7 +1989,7 @@ button,
   @media (max-width: 1023px) {
     .reviews {
       padding-top: 33px;
-      padding-bottom: 45px; } }
+      padding-bottom: 82px; } }
   @media (max-width: 767px) {
     .reviews {
       padding-top: 24px;

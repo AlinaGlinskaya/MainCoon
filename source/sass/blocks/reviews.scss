@@ -3,7 +3,7 @@
 
   @include viewport--md {
     padding-top: 33px;
-    padding-bottom: 45px;
+    padding-bottom: 82px;
   }
 
   @include viewport--sm {
@@ -46,7 +46,7 @@
 
     &--md {
       display: none;
-      
+
       @include viewport--md {
         display: block;
         position: static;

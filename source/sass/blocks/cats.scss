@@ -1,4 +1,5 @@
 .cats {
+  position: relative;
   padding-top: 223px;
   padding-bottom: 70px;
 
@@ -13,21 +14,25 @@
 
   .swiper-button {
     display: none;
-    top: 37%;
+    top: 54.2%;
+
+    @include viewport--sm {
+      top: 58%;
+    }
 
     &-next {
-      right: -50px;
+      right: -10px;
 
       @include viewport--sm {
-        right: -20px;
+        right: 0;
       }
     }
 
     &-prev {
-      left: -50px;
+      left: -10px;
 
       @include viewport--sm {
-        left: -20px;
+        left: 0;
       }
     }
 
