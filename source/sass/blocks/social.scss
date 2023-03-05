@@ -16,18 +16,6 @@
   height: 24px;
   width: 33px;
 
-  .social__link.hover {
-    transition: color $default-transition-settings;
-
-    @media (hover: hover), screen and (min-width: 0\0) {
-      &:hover,
-      &:focus {
-        color: $color-muesli;
-        transition: color $default-transition-settings;
-      }
-    }
-  }
-
   svg {
     place-self: center;
   }
@@ -35,6 +23,18 @@
   @include viewport--md {
     padding: 3px;
     width: 25px;
+  }
+}
+
+.social__link.hover {
+  transition: color $default-transition-settings;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      color: $color-muesli;
+      transition: color $default-transition-settings;
+    }
   }
 }
 

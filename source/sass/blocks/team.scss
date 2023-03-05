@@ -65,7 +65,6 @@
 
   .swiper-button {
     top: 57%;
-    transition: opacity $default-transition-settings;
 
     @include viewport--md {
       top: 91%;
@@ -105,7 +104,11 @@
         display: block;
       }
     }
+  }
 
+  .swiper-button.hover {
+    transition: opacity $default-transition-settings;
+    
     @media (hover: hover), screen and (min-width: 0\0) {
       &:hover,
       &:focus {

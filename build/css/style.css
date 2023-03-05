@@ -2231,14 +2231,6 @@ button,
   display: grid;
   height: 24px;
   width: 33px; }
-  .social__link .social__link.hover {
-    -webkit-transition: color 0.3s ease;
-    transition: color 0.3s ease; }
-    @media (hover: hover), screen and (min-width: 0\0) {
-      .social__link .social__link.hover:hover, .social__link .social__link.hover:focus {
-        color: #a07b50;
-        -webkit-transition: color 0.3s ease;
-        transition: color 0.3s ease; } }
   .social__link svg {
     -ms-grid-row-align: center;
     -ms-grid-column-align: center;
@@ -2247,6 +2239,15 @@ button,
     .social__link {
       padding: 3px;
       width: 25px; } }
+
+.social__link.hover {
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease; }
+  @media (hover: hover), screen and (min-width: 0\0) {
+    .social__link.hover:hover, .social__link.hover:focus {
+      color: #a07b50;
+      -webkit-transition: color 0.3s ease;
+      transition: color 0.3s ease; } }
 
 .social--beige .social__list {
   -webkit-box-orient: horizontal;
@@ -2386,9 +2387,7 @@ button,
   .team .social__item:last-child {
     margin-left: -6px; }
   .team .swiper-button {
-    top: 57%;
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease; }
+    top: 57%; }
     @media (max-width: 1023px) {
       .team .swiper-button {
         top: 91%; } }
@@ -2414,8 +2413,11 @@ button,
       @media (max-width: 1023px) {
         .team .swiper-button--md {
           display: block; } }
+  .team .swiper-button.hover {
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; }
     @media (hover: hover), screen and (min-width: 0\0) {
-      .team .swiper-button:hover, .team .swiper-button:focus {
+      .team .swiper-button.hover:hover, .team .swiper-button.hover:focus {
         opacity: 0.5;
         -webkit-transition: opacity 0.3s ease;
         transition: opacity 0.3s ease; } }
