@@ -16,13 +16,15 @@
   height: 24px;
   width: 33px;
 
-  transition: color $default-transition-settings;
+  .social__link.hover {
+    transition: color $default-transition-settings;
 
-  @media (hover: hover), screen and (min-width: 0\0) {
-    &:hover,
-    &:focus {
-      color: $color-muesli;
-      transition: color $default-transition-settings;
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-muesli;
+        transition: color $default-transition-settings;
+      }
     }
   }
 
@@ -50,6 +52,9 @@
     height: 28px;
     padding: 3px;
     color: $color-muesli;
+  }
+
+  .social__link.hover {
     transition: color $default-transition-settings, background-color $default-transition-settings;
 
     @media (hover: hover), screen and (min-width: 0\0) {

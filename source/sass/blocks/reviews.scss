@@ -32,16 +32,6 @@
         padding-left: 10px;
         padding-right: 10px;
       }
-
-      @media (hover: hover), screen and (min-width: 0\0) {
-        &:hover,
-        &:focus {
-          svg {
-            opacity: 1;
-            transition: opacity $default-transition-settings;
-          }
-        }
-      }
     }
 
     &--md {
@@ -89,6 +79,18 @@
     &-next {
       @include viewport--sm {
         right: -53px;
+      }
+    }
+  }
+
+  .swiper-button--lg.hover {
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        svg {
+          opacity: 1;
+          transition: opacity $default-transition-settings;
+        }
       }
     }
   }

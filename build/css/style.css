@@ -738,26 +738,28 @@ button,
     line-height: 21px;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.2);
-    border: none;
-    -webkit-transition: color 0.3s ease;
-    transition: color 0.3s ease; }
+    border: none; }
     @media (max-width: 767px) {
       .btn--control {
         font-size: 16px;
         line-height: 20px; } }
+    .btn--control.is-active {
+      color: #ffffff; }
+  .btn--control.hover {
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease; }
     @media (hover: hover), screen and (min-width: 0\0) {
-      .btn--control:hover, .btn--control:focus-visible {
+      .btn--control.hover:hover, .btn--control.hover:focus-visible {
         color: white;
         -webkit-transition: color 0.3s ease;
         transition: color 0.3s ease; } }
-    .btn--control.is-active {
-      color: #ffffff; }
   .btn--bordered {
-    border: 1px solid #a07b50;
+    border: 1px solid #a07b50; }
+  .btn--bordered.hover {
     -webkit-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease; }
     @media (hover: hover), screen and (min-width: 0\0) {
-      .btn--bordered:hover, .btn--bordered:focus-visible {
+      .btn--bordered.hover:hover, .btn--bordered.hover:focus-visible {
         background-color: #a07b50;
         -webkit-transition: background-color 0.3s ease;
         transition: background-color 0.3s ease; } }
@@ -836,21 +838,25 @@ button,
     height: 100%;
     min-height: 165px;
     background-color: rgba(0, 0, 0, 0.3);
-    border: 1px solid #a07b50;
-    -webkit-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease; }
+    border: 1px solid #a07b50; }
     @media (max-width: 1023px) {
       .care__link {
         min-height: 168px; } }
     @media (max-width: 767px) {
       .care__link {
         min-height: auto; } }
+  .care__link.hover {
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; }
+    .care__link.hover .care__arrow {
+      -webkit-transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease; }
     @media (hover: hover), screen and (min-width: 0\0) {
-      .care__link:hover, .care__link:focus {
+      .care__link.hover:hover, .care__link.hover:focus {
         background-color: rgba(0, 0, 0, 0.5);
         -webkit-transition: background-color 0.3s ease;
         transition: background-color 0.3s ease; }
-        .care__link:hover .care__arrow, .care__link:focus .care__arrow {
+        .care__link.hover:hover .care__arrow, .care__link.hover:focus .care__arrow {
           background-color: rgba(0, 0, 0, 0.5);
           -webkit-transition: background-color 0.3s ease;
           transition: background-color 0.3s ease; } }
@@ -903,9 +909,7 @@ button,
             justify-content: center;
     padding: 0 18px;
     background-color: #a07b50;
-    border-left: 1px solid #a07b50;
-    -webkit-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease; }
+    border-left: 1px solid #a07b50; }
     @media (max-width: 767px) {
       .care__arrow {
         padding: 0 12px; } }
@@ -1180,14 +1184,7 @@ button,
     min-height: 112px;
     padding: 20px 124px 20px 41px;
     border: 1px solid rgba(160, 123, 80, 0.4);
-    cursor: pointer;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease; }
-    @media (hover: hover), screen and (min-width: 0\0) {
-      .faq__question:hover, .faq__question:focus {
-        background-color: #151313;
-        -webkit-transition: 0.3s ease;
-        transition: 0.3s ease; } }
+    cursor: pointer; }
     @media (max-width: 1023px) {
       .faq__question {
         min-height: 77px;
@@ -1196,6 +1193,14 @@ button,
       .faq__question {
         min-height: 43px;
         padding: 4px 56px 11px 12px; } }
+  .faq__question.hover {
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease; }
+    @media (hover: hover), screen and (min-width: 0\0) {
+      .faq__question.hover:hover, .faq__question.hover:focus {
+        background-color: #151313;
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease; } }
   .faq__theme {
     margin: 6px 0 0;
     font-size: 16px;
@@ -1279,11 +1284,6 @@ button,
     color: #a07b50; }
   .faq__item.is-active .faq__answer {
     display: block; }
-  @media (hover: hover), screen and (min-width: 0\0) {
-    .faq__item.is-active .faq__question:hover .faq__button, .faq__item.is-active .faq__question:focus .faq__button {
-      background-color: #151313;
-      -webkit-transition: 0.3s ease;
-      transition: 0.3s ease; } }
   .faq__item.is-active .faq__button {
     background-color: #a07b50;
     -webkit-transition: background-color 0.3s ease;
@@ -1292,6 +1292,11 @@ button,
     display: block; }
   .faq__item.is-active .faq__icon--plus {
     display: none; }
+  @media (hover: hover), screen and (min-width: 0\0) {
+    .faq__item.is-active.hover .faq__question:hover .faq__button, .faq__item.is-active.hover .faq__question:focus .faq__button {
+      background-color: #151313;
+      -webkit-transition: 0.3s ease;
+      transition: 0.3s ease; } }
 
 .features {
   padding: 83px 0 100px;
@@ -1393,17 +1398,7 @@ button,
             justify-content: center;
     margin: 18px 20px;
     min-height: 266px;
-    padding-top: 18px;
-    -webkit-transition: color 0.3s ease;
-    transition: color 0.3s ease; }
-    @media (hover: hover), screen and (min-width: 0\0) {
-      .features__inner:hover, .features__inner:focus {
-        background-color: #a07b50;
-        -webkit-transition: background-color 0.3s ease;
-        transition: background-color 0.3s ease; }
-        .features__inner:hover svg, .features__inner:focus svg {
-          fill: #ffffff;
-          stroke: #a07b50; } }
+    padding-top: 18px; }
     @media (max-width: 1023px) {
       .features__inner {
         padding-top: 48px; } }
@@ -1411,6 +1406,17 @@ button,
       .features__inner {
         padding-top: 36px;
         min-height: auto; } }
+  .features__inner.hover {
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease; }
+    @media (hover: hover), screen and (min-width: 0\0) {
+      .features__inner.hover:hover, .features__inner.hover:focus {
+        background-color: #a07b50;
+        -webkit-transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease; }
+        .features__inner.hover:hover svg, .features__inner.hover:focus svg {
+          fill: #ffffff;
+          stroke: #a07b50; } }
   .features__icon {
     fill: #a07b50;
     stroke: #1f1c1d;
@@ -1504,11 +1510,6 @@ button,
     color: #fdf2e6;
     -webkit-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease; }
-    @media (hover: hover), screen and (min-width: 0\0) {
-      .footer__phone:hover, .footer__phone:focus {
-        opacity: 0.7;
-        -webkit-transition: opacity 0.3s ease;
-        transition: opacity 0.3s ease; } }
     @media (max-width: 767px) {
       .footer__phone {
         -webkit-box-ordinal-group: 0;
@@ -1517,6 +1518,11 @@ button,
         margin-bottom: 15px;
         font-weight: 400;
         line-height: 19px; } }
+  @media (hover: hover), screen and (min-width: 0\0) {
+    .footer__phone.hover:hover, .footer__phone.hover:focus {
+      opacity: 0.7;
+      -webkit-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease; } }
   @media (max-width: 767px) {
     .footer .social {
       -webkit-box-ordinal-group: 0;
@@ -1526,12 +1532,12 @@ button,
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content; }
-    @media (hover: hover), screen and (min-width: 0\0) {
-      .footer .social .social__link:hover, .footer .social .social__link:focus {
-        color: #ffffff;
-        background-color: rgba(255, 255, 255, 0);
-        -webkit-transition: color 0.3s ease;
-        transition: color 0.3s ease; } }
+  @media (hover: hover), screen and (min-width: 0\0) {
+    .footer .social .social__link.hover:hover, .footer .social .social__link.hover:focus {
+      color: #ffffff;
+      background-color: rgba(255, 255, 255, 0);
+      -webkit-transition: color 0.3s ease;
+      transition: color 0.3s ease; } }
   .footer .social .social__item:not(:last-child) {
     margin-right: 10px; }
   .footer .social .social__icon--fb {
@@ -2015,11 +2021,6 @@ button,
   .reviews .swiper-button--lg .btn {
     padding-left: 10px;
     padding-right: 10px; }
-  @media (hover: hover), screen and (min-width: 0\0) {
-    .reviews .swiper-button--lg:hover svg, .reviews .swiper-button--lg:focus svg {
-      opacity: 1;
-      -webkit-transition: opacity 0.3s ease;
-      transition: opacity 0.3s ease; } }
   .reviews .swiper-button--md {
     display: none; }
     @media (max-width: 1023px) {
@@ -2048,6 +2049,11 @@ button,
   @media (max-width: 767px) {
     .reviews .swiper-button-next {
       right: -53px; } }
+  @media (hover: hover), screen and (min-width: 0\0) {
+    .reviews .swiper-button--lg.hover:hover svg, .reviews .swiper-button--lg.hover:focus svg {
+      opacity: 1;
+      -webkit-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease; } }
   .reviews__slide {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2224,14 +2230,15 @@ button,
   display: -ms-grid;
   display: grid;
   height: 24px;
-  width: 33px;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease; }
-  @media (hover: hover), screen and (min-width: 0\0) {
-    .social__link:hover, .social__link:focus {
-      color: #a07b50;
-      -webkit-transition: color 0.3s ease;
-      transition: color 0.3s ease; } }
+  width: 33px; }
+  .social__link .social__link.hover {
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease; }
+    @media (hover: hover), screen and (min-width: 0\0) {
+      .social__link .social__link.hover:hover, .social__link .social__link.hover:focus {
+        color: #a07b50;
+        -webkit-transition: color 0.3s ease;
+        transition: color 0.3s ease; } }
   .social__link svg {
     -ms-grid-row-align: center;
     -ms-grid-column-align: center;
@@ -2254,11 +2261,13 @@ button,
   width: 28px;
   height: 28px;
   padding: 3px;
-  color: #a07b50;
+  color: #a07b50; }
+
+.social--beige .social__link.hover {
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
   transition: color 0.3s ease, background-color 0.3s ease; }
   @media (hover: hover), screen and (min-width: 0\0) {
-    .social--beige .social__link:hover, .social--beige .social__link:focus {
+    .social--beige .social__link.hover:hover, .social--beige .social__link.hover:focus {
       color: #ffffff;
       background-color: #a07b50;
       -webkit-transition: color 0.3s ease, background-color 0.3s ease;

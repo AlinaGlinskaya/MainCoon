@@ -29,12 +29,20 @@
 
     border: none;
 
-    transition: color $default-transition-settings;
-
     @include viewport--sm {
       font-size: 16px;
       line-height: 20px;
     }
+
+
+    &.is-active {
+      color: $color-default-white;
+    }
+  }
+
+  &--control.hover {
+
+    transition: color $default-transition-settings;
 
     @media (hover: hover), screen and (min-width: 0\0) {
       &:hover,
@@ -43,14 +51,13 @@
         transition: color $default-transition-settings;
       }
     }
-
-    &.is-active {
-      color: $color-default-white;
-    }
   }
 
   &--bordered {
     border: 1px solid $color-muesli;
+  }
+
+  &--bordered.hover {
     transition: background-color $default-transition-settings;
 
     @media (hover: hover), screen and (min-width: 0\0) {

@@ -99,15 +99,6 @@
 
     border: 1px solid rgba($color: $color-muesli, $alpha: 0.4);
     cursor: pointer;
-    transition: $default-transition-settings;
-
-    @media (hover: hover), screen and (min-width: 0\0) {
-      &:hover,
-      &:focus {
-        background-color: $color-seal-brown;
-        transition: $default-transition-settings;
-      }
-    }
 
     @include viewport--md {
       min-height: 77px;
@@ -117,6 +108,18 @@
     @include viewport--sm {
       min-height: 43px;
       padding: 4px 56px 11px 12px;
+    }
+  }
+
+  &__question.hover {
+    transition: $default-transition-settings;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background-color: $color-seal-brown;
+        transition: $default-transition-settings;
+      }
     }
   }
 
@@ -230,18 +233,6 @@
       display: block;
     }
 
-    .faq__question {
-      @media (hover: hover), screen and (min-width: 0\0) {
-        &:hover,
-        &:focus {
-          .faq__button {
-            background-color: $color-seal-brown;
-            transition: $default-transition-settings;
-          }
-        }
-      }
-    }
-
     .faq__button {
       background-color: $color-muesli;
       transition: background-color $default-transition-settings;
@@ -254,6 +245,20 @@
 
       &--plus {
         display: none;
+      }
+    }
+  }
+
+  &__item.is-active.hover {
+    .faq__question {
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover,
+        &:focus {
+          .faq__button {
+            background-color: $color-seal-brown;
+            transition: $default-transition-settings;
+          }
+        }
       }
     }
   }

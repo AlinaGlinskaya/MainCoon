@@ -79,7 +79,6 @@
 
     background-color: rgba($color: $color-default-black, $alpha: 0.3);
     border: 1px solid $color-muesli;
-    transition: background-color $default-transition-settings;
 
     @include viewport--md {
       min-height: 168px;
@@ -87,6 +86,14 @@
 
     @include viewport--sm {
       min-height: auto;
+    }
+  }
+
+  &__link.hover {
+    transition: background-color $default-transition-settings;
+
+    .care__arrow {
+      transition: background-color $default-transition-settings;
     }
 
     @media (hover: hover), screen and (min-width: 0\0) {
@@ -159,7 +166,6 @@
 
     background-color: $color-muesli;
     border-left: 1px solid $color-muesli;
-    transition: background-color $default-transition-settings;
 
     @include viewport--sm {
       padding: 0 12px;

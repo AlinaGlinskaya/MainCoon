@@ -107,6 +107,17 @@
     min-height: 266px;
     padding-top: 18px;
 
+    @include viewport--md {
+      padding-top: 48px;
+    }
+
+    @include viewport--sm {
+      padding-top: 36px;
+      min-height: auto;
+    }
+  }
+
+  &__inner.hover {
     transition: color $default-transition-settings;
 
     @media (hover: hover), screen and (min-width: 0\0) {
@@ -120,15 +131,6 @@
           stroke: $color-muesli;
         }
       }
-    }
-
-    @include viewport--md {
-      padding-top: 48px;
-    }
-
-    @include viewport--sm {
-      padding-top: 36px;
-      min-height: auto;
     }
   }
 
