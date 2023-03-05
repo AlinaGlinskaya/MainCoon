@@ -101,7 +101,6 @@
 
   .swiper-slide {
     @include viewport--md {
-
       &-active {
         left: 30%;
       }
@@ -111,7 +110,7 @@
       }
 
       &-active img {
-        transform: scale(2.0);
+        transform: scale(2);
         position: relative;
         z-index: 100;
         max-width: 80%;
@@ -180,4 +179,3 @@
     grid-area: center;
   }
 }
-

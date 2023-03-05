@@ -8,5 +8,3 @@ const initTabs = () => {
 };
 
 export {initTabs};
-
-
